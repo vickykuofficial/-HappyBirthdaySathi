@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Happy Birthday Sathi 🎂</title>
+<meta name="description" content="A special birthday surprise for Sathi - my dear friend and love." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<!-- Entry / Gate screen -->
+<section id="gate" class="gate">
+  <div class="gate-bg"></div>
+  <div class="gate-content">
+    <div class="gate-emoji">🎂</div>
+    <h1 class="gate-title">A little surprise for you</h1>
+    <p class="gate-sub">Made with all my love, just for you, Sathi.</p>
+    <button id="enterBtn" class="enter-btn">
+      <span class="enter-icon">▶</span> Tap to Enter &amp; Play Music
+    </button>
+    <p class="gate-hint">Best experienced with sound on 🔊</p>
+  </div>
+  <div class="floating-emojis" id="gateEmojis"></div>
+</section>
+
+<!-- Main site -->
+<main id="main" class="main hidden">
+  <!-- Music player (hidden YT) -->
+  <audio id="bgAudio" autoplay loop preload="auto" src="मेरी%20प्यारी%20साथी.mp3"></audio>
+
+  <!-- Top bar -->
+  <header class="topbar">
+    <div class="brand">For Sathi ✨</div>
+    <div class="topbar-actions">
+      <button id="musicToggle" class="icon-btn" aria-label="Toggle music">🔊</button>
+      <a class="icon-btn ig-link" href="https://www.instagram.com/sonamondal4977/" target="_blank" rel="noopener" aria-label="Sona Instagram">📸</a>
+      <a class="icon-btn ig-link" href="https://www.instagram.com/vickyku_official/" target="_blank" rel="noopener" aria-label="Vicky Instagram">📷</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-particles" id="heroParticles"></div>
+    <div class="hero-content">
+      <p class="hero-kicker">Happy Birthday</p>
+      <h1 class="hero-name">Sathi <span class="heart">❤</span></h1>
+      <p class="hero-sub">My dear friend, my favorite person, my love.</p>
+      <div class="avatar-wrap">
+        <div class="avatar-ring">
+          <div class="avatar">S</div>
+        </div>
+        <div class="avatar-glow"></div>
+      </div>
+      <p class="hero-date">Wishing you a year full of magic ✨</p>
+    </div>
+  </section>
+
+  <!-- Typing quotes -->
+  <section class="quotes-section">
+    <div class="quote-card glass">
+      <span class="quote-mark">“</span>
+      <p id="quoteText" class="quote-text"></p>
+      <span class="quote-mark close">”</span>
+      <div class="quote-dots" id="quoteDots"></div>
+    </div>
+  </section>
+
+  <!-- Cake cutting -->
+  <section class="cake-section">
+    <h2 class="section-title">Cut the Cake 🎂</h2>
+    <p class="section-sub">Make a wish, then tap the cake to cut it.</p>
+    <div class="cake-stage">
+      <div class="cake-row">
+        <div class="photo-frame photo-left" id="photoLeft">
+        <img src="1.jpeg" alt="Memory 1" onerror="this.style.display='none'; this.parentElement.classList.add('placeholder-photo');" />
+        <div class="photo-placeholder">📷</div>
+      </div>
+      <div class="cake" id="cake">
+        <div class="plate"></div>
+        <div class="layer layer-bottom"></div>
+        <div class="layer layer-top"></div>
+        <div class="frosting"></div>
+        <div class="drips">
+          <span></span><span></span><span></span><span></span><span></span>
+        </div>
+        <div class="candles">
+          <div class="candle c1"><span class="flame"></span></div>
+          <div class="candle c2"><span class="flame"></span></div>
+          <div class="candle c3"><span class="flame"></span></div>
+          <div class="candle c4"><span class="flame"></span></div>
+          <div class="candle c5"><span class="flame"></span></div>
+        </div>
+        <div class="knife" id="knife">🔪</div>
+      </div>
+      <div class="photo-frame photo-right" id="photoRight">
+        <img src="2.jpeg" alt="Memory 2" onerror="this.style.display='none'; this.parentElement.classList.add('placeholder-photo');" />
+        <div class="photo-placeholder">📷</div>
+      </div>
+      </div>
+      <button id="cutBtn" class="cut-btn">Blow Candle & Cut Cake</button>
+      <p id="cakeMsg" class="cake-msg"></p>
+    </div>
+    <canvas id="confettiCanvas" class="confetti-canvas"></canvas>
+  </section>
+
+  <!-- Wishes grid -->
+  <section class="wishes-section">
+    <h2 class="section-title">Little Wishes For You 💖</h2>
+    <div class="wishes-grid">
+      <div class="wish-card glass"><span class="wish-emoji">🌸</span><p>May every sunrise bring you new hope and every sunset bring you peace.</p></div>
+      <div class="wish-card glass"><span class="wish-emoji">✨</span><p>May your smile never fade and your heart never ache.</p></div>
+      <div class="wish-card glass"><span class="wish-emoji">🦋</span><p>May you chase your dreams and catch every single one.</p></div>
+      <div class="wish-card glass"><span class="wish-emoji">🌙</span><p>May the stars align to make all your wishes come true.</p></div>
+      <div class="wish-card glass"><span class="wish-emoji">👑</span><p>May you always remember how loved and cherished you are.</p></div>
+      <div class="wish-card glass"><span class="wish-emoji">🎵</span><p>May your life be a beautiful song that never ends.</p></div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="gallery-section">
+    <h2 class="section-title">Our Memories 📸</h2>
+    <p class="section-sub">All 5 photos load automatically from this folder.</p>
+    <div class="gallery-grid" id="galleryGrid">
+    </div>
+  </section>
+
+  <!-- Birthday gift -->
+  <section class="gift-section">
+    <h2 class="section-title">A Special Gift 🎁</h2>
+    <p class="section-sub">Tap the gift to open it.</p>
+    <button id="giftBtn" class="gift-btn">🎁 Open Gift</button>
+    <div id="giftReveal" class="gift-reveal hidden">
+      <span class="gift-heart">❤</span>
+      <h3 class="gift-msg">I Love You Sathi</h3>
+      <p class="gift-sub">Forever & always 💖</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>Made with ❤ for Sathi</p>
+    <a href="https://www.instagram.com/sonamondal4977/" target="_blank" rel="noopener" class="ig-btn">Follow Sathi on Instagram 📸</a>
+    <a href="https://www.instagram.com/vickyku_official/" target="_blank" rel="noopener" class="ig-btn">Follow Vicky on Instagram 📷</a>
+    <p class="credit">Music & photos load automatically · Made with love.</p>
+  </footer>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
